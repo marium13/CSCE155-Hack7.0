@@ -24,6 +24,14 @@ int main(int argc, char **argv) {
   if(contains(testArray, n, 42)) {
     printf("contains failed!\n");
   }
+  if (!containsWithin(testArray, n, 3, 3, 5)) {
+  printf("containsWithin failed: should find 3 in range [3,5]\n");
+}
+
+if (containsWithin(testArray, n, 9, 0, 3)) {
+  printf("containsWithin failed: should NOT find 9 in range [0,3]\n");
+}
+
 
   int *temp = paddedCopy(testArray, n, n - 3);
   printf("Temp Array: ");
